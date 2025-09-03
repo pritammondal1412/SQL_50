@@ -21,4 +21,30 @@ where low_fats="Y" and recyclable="y";
 select name
 from Customer
 where referee_id!=2 OR referee_id IS NULL;
+```
 
+[595 - Big Countries](https://leetcode.com/problems/big-countries/description/?envType=study-plan-v2&envId=top-sql-50)
+
+```sql
+select name,population,area 
+from World where 
+area>=3000000 
+OR population>=25000000;
+```
+
+[1148 - Article Views I](https://leetcode.com/problems/article-views-i/description/?envType=study-plan-v2&envId=top-sql-50)
+
+```sql
+select distinct author_id as id
+from Views 
+where author_id = viewer_id
+ORDER BY author_id;
+```
+
+[1683 - Invalid Tweets](https://leetcode.com/problems/invalid-tweets/description/?envType=study-plan-v2&envId=top-sql-50)
+
+```sql
+select tweet_id 
+from Tweets
+where LENGTH(content)>15;
+```
